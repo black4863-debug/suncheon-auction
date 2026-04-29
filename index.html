@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>순천 경매 매수신청대리 | 반가운부동산</title>
+<meta name="description" content="순천법원 인근 공인중개사가 직접 진행하는 경매 매수신청대리. 권리분석부터 입찰대리, 낙찰 후 매도까지 원스톱 서비스.">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+:root {
+  --font: "Pretendard", "Apple SD Gothic Neo", "Noto Sans KR", system-ui, sans-serif;
+  --gold:        #C9A84C;
+  --gold-light:  #E2C46E;
+  --gold-pale:   rgba(201,168,76,0.13);
+  --gold-border: rgba(201,168,76,0.32);
+  --slate-900:   #1C2331;
+  --slate-800:   #242D3D;
+  --bg-page:     #F5F2EC;
+  --bg-card:     #FFFFFF;
+  --text-main:   #1A2030;
+  --text-sub:    rgba(26,32,48,0.58);
+  --text-muted:  rgba(26,32,48,0.36);
+  --border:      rgba(26,32,48,0.08);
+  --shadow:      0 2px 16px rgba(26,32,48,0.07), 0 0 0 1px var(--border);
+  --shadow-hover:0 8px 28px rgba(26,32,48,0.13);
+  --shadow-btn:  0 4px 18px rgba(201,168,76,0.38);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+*{word-break:keep-all;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--font);background:var(--bg-page);color:var(--text-main);-webkit-font-smoothing:antialiased;line-height:1.6;}
+a{text-decoration:none;color:inherit;}
+img{max-width:100%;display:block;}
+.container{max-width:740px;margin:0 auto;padding:0 28px;}
+
+/* ── HERO ── */
+.hero{background:linear-gradient(145deg,#111827 0%,#0A0F1A 100%);padding:56px 28px 0;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;top:-80px;right:-40px;width:400px;height:400px;background:radial-gradient(circle,rgba(201,168,76,0.10) 0%,transparent 65%);pointer-events:none;}
+.hero-inner{max-width:740px;margin:0 auto;display:flex;align-items:flex-end;gap:0;position:relative;z-index:1;}
+.hero-text{flex:1;min-width:0;padding-bottom:44px;}
+.hero-photo{flex-shrink:0;width:380px;align-self:flex-end;margin-bottom:-56px;margin-right:-28px;-webkit-mask-image:linear-gradient(to bottom,black 55%,transparent 88%);mask-image:linear-gradient(to bottom,black 55%,transparent 88%);}
+.hero-photo img{width:100%;display:block;object-fit:contain;object-position:bottom center;}
+
+.hero-badge{display:inline-flex;align-items:center;gap:7px;background:var(--gold-pale);border:1px solid var(--gold-border);color:var(--gold-light);font-size:12px;font-weight:700;letter-spacing:.05em;padding:6px 16px;border-radius:999px;margin-bottom:22px;}
+.hero-badge b{width:6px;height:6px;border-radius:50%;background:var(--gold);display:inline-block;}
+.hero h1{font-size:clamp(32px,5.5vw,48px);font-weight:800;letter-spacing:-.030em;line-height:1.22;color:#F5F0E8;margin-bottom:18px;}
+.hero h1 em{color:var(--gold-light);font-style:normal;}
+.hero-sub{font-size:16px;color:rgba(245,240,232,0.65);line-height:1.8;margin-bottom:28px;max-width:380px;}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:24px;}
+.btn{display:inline-flex;align-items:center;gap:9px;padding:0 28px;height:54px;border-radius:999px;font-size:16px;font-weight:700;letter-spacing:-.01em;cursor:pointer;transition:all .15s;border:none;white-space:nowrap;font-family:var(--font);}
+.btn:active{transform:scale(.97);}
+.btn-call{background:var(--gold);color:#0A0F1A;box-shadow:var(--shadow-btn);}
+.btn-call:hover{background:var(--gold-light);}
+.btn-kakao{background:#FEE500;color:#3A1D1D;}
+.btn-kakao:hover{opacity:.88;}
+.hero-trust{display:flex;gap:20px;flex-wrap:wrap;}
+.trust-item{font-size:12px;color:rgba(245,240,232,0.42);display:flex;align-items:center;gap:6px;}
+.trust-dot{width:5px;height:5px;border-radius:50%;background:var(--gold);opacity:.8;flex-shrink:0;}
+
+/* ── Section ── */
+.section{padding:44px 0;}
+.section+.section{border-top:1px solid var(--border);}
+.section-label{font-size:11px;font-weight:800;letter-spacing:.12em;color:var(--gold);text-transform:uppercase;margin-bottom:6px;}
+.section-title{font-size:clamp(24px,4vw,32px);font-weight:800;letter-spacing:-.026em;line-height:1.28;margin-bottom:8px;color:var(--text-main);}
+.section-title em{color:var(--gold);font-style:normal;}
+.section-desc{font-size:15px;color:var(--text-sub);line-height:1.7;margin-bottom:24px;}
+
+/* ── Steps ── */
+.steps{display:flex;flex-direction:column;gap:8px;}
+.step-item{display:flex;align-items:flex-start;gap:16px;background:var(--bg-card);border-radius:14px;padding:18px 22px;box-shadow:var(--shadow);transition:box-shadow .15s;}
+.step-item:hover{box-shadow:var(--shadow-hover);}
+.step-num{flex-shrink:0;width:36px;height:36px;border-radius:50%;background:var(--gold-pale);border:2px solid var(--gold-border);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:800;color:var(--gold);}
+.step-content h3{font-size:17px;font-weight:700;letter-spacing:-.015em;margin-bottom:4px;color:var(--text-main);}
+.step-content p{font-size:14px;color:var(--text-sub);line-height:1.65;}
+
+/* ── Cred ── */
+.cred-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+@media(max-width:480px){.cred-grid{grid-template-columns:1fr;}}
+.cred-card{background:var(--bg-card);border-radius:14px;padding:22px;box-shadow:var(--shadow);border-left:3px solid var(--gold);}
+.cred-icon{font-size:24px;margin-bottom:12px;}
+.cred-card h3{font-size:15px;font-weight:700;color:var(--text-main);margin-bottom:5px;}
+.cred-card p{font-size:14px;color:var(--text-sub);line-height:1.65;}
+
+/* ── Blog ── */
+.blog-list{display:flex;flex-direction:column;gap:8px;}
+.blog-card{display:flex;align-items:center;gap:16px;background:var(--bg-card);border-radius:14px;padding:18px 22px;box-shadow:var(--shadow);transition:all .15s;}
+.blog-card:hover{box-shadow:var(--shadow-hover);transform:translateY(-1px);}
+.blog-card-icon{flex-shrink:0;width:44px;height:44px;background:var(--gold-pale);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;}
+.blog-card-text{flex:1;}
+.blog-card-text h3{font-size:16px;font-weight:700;letter-spacing:-.015em;margin-bottom:3px;line-height:1.4;}
+.blog-card-text p{font-size:13px;color:var(--text-muted);}
+.blog-card-arrow{flex-shrink:0;color:var(--gold);font-size:22px;font-weight:700;}
+.blog-all-btn{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;height:58px;border-radius:14px;background:var(--gold);border:none;color:#0A0F1A;font-size:17px;font-weight:800;margin-top:10px;box-shadow:var(--shadow-btn);transition:all .15s;font-family:var(--font);cursor:pointer;letter-spacing:-.01em;}
+.blog-all-btn:hover{background:var(--gold-light);transform:translateY(-1px);}
+
+/* ── Sites ── */
+.sites-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+@media(max-width:400px){.sites-grid{grid-template-columns:1fr;}}
+.site-card{display:flex;align-items:center;gap:14px;background:var(--bg-card);border-radius:12px;padding:16px 18px;box-shadow:var(--shadow);transition:box-shadow .15s;}
+.site-card:hover{box-shadow:var(--shadow-hover);}
+.site-icon{flex-shrink:0;width:38px;height:38px;background:var(--gold-pale);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px;}
+.site-text h4{font-size:15px;font-weight:700;margin-bottom:2px;line-height:1.3;}
+.site-text p{font-size:12px;color:var(--text-muted);}
+
+/* ── Location ── */
+.map-img{border-radius:14px;width:100%;box-shadow:var(--shadow);}
+
+/* ── Bottom CTA ── */
+.bottom-cta{background:linear-gradient(135deg,#111827 0%,#0A0F1A 100%);padding:56px 28px;text-align:center;}
+.bottom-cta h2{font-size:clamp(26px,4vw,36px);font-weight:800;letter-spacing:-.026em;line-height:1.28;color:#F5F0E8;margin-bottom:12px;}
+.bottom-cta h2 em{color:var(--gold-light);font-style:normal;}
+.bottom-cta p{font-size:16px;color:rgba(245,240,232,0.55);margin-bottom:32px;line-height:1.8;}
+.bottom-cta .cta-row{justify-content:center;}
+
+/* ── Footer ── */
+.footer{background:#0A0F1A;border-top:1px solid rgba(255,255,255,0.06);padding:28px 24px;text-align:center;}
+.footer p{font-size:12px;color:rgba(255,255,255,0.28);line-height:2;}
+
+/* ── Mobile ── */
+@media(max-width:580px){
+  .hero{padding:40px 20px 0;}
+  .hero-inner{flex-direction:column;align-items:center;text-align:center;}
+  .hero-text{padding-bottom:20px;}
+  .hero-photo{width:200px;margin-right:0;}
+  .hero-sub{margin-left:auto;margin-right:auto;}
+  .cta-row{justify-content:center;}
+  .hero-trust{justify-content:center;}
+}
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-text">
+      <div class="hero-badge"><b></b>순천법원 인근 · 매수신청대리인 등록</div>
+      <h1>순천 경매,<br><em>처음부터 끝까지</em><br>직접 진행합니다</h1>
+      <p class="hero-sub">권리분석 · 현장확인 · 입찰대리 · 낙찰 후 매도까지<br>공인중개사가 원스톱으로 처리해드립니다</p>
+      <div class="cta-row">
+        <a href="tel:010-6482-8545" class="btn btn-call">📞 010-6482-8545</a>
+        <a href="https://open.kakao.com/me/r_estate119" target="_blank" class="btn btn-kakao">💬 카카오 상담</a>
+      </div>
+      <div class="hero-trust">
+        <span class="trust-item"><span class="trust-dot"></span>공인중개사</span>
+        <span class="trust-item"><span class="trust-dot"></span>광주지방법원 등록 매수신청대리인</span>
+        <span class="trust-item"><span class="trust-dot"></span>책임보증 2억원</span>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <img src="photo.png" alt="반가운부동산 대표 서정원 공인중개사">
+    </div>
+  </div>
+</section>
+
+<div class="container">
+
+  <section class="section">
+    <p class="section-label">Service Process</p>
+    <h2 class="section-title">입찰에서 마무리까지<br><em>6단계 완전 대행</em></h2>
+    <p class="section-desc">타지에 계셔도 괜찮습니다. 순천 현지에서 발로 뛰며 직접 처리합니다.</p>
+    <div class="steps">
+      <div class="step-item"><div class="step-num">1</div><div class="step-content"><h3>물건 검토 · 권리분석</h3><p>등기부등본, 배당표, 임차인 현황 분석. 위험 물건은 미리 걸러드립니다.</p></div></div>
+      <div class="step-item"><div class="step-num">2</div><div class="step-content"><h3>현장 임장</h3><p>직접 현장을 방문해 점유 상태, 건물 상태, 주변 시세를 확인합니다.</p></div></div>
+      <div class="step-item"><div class="step-num">3</div><div class="step-content"><h3>입찰가 전략 수립</h3><p>실거래가 데이터와 현장 분석을 바탕으로 최적 입찰가를 함께 설계합니다.</p></div></div>
+      <div class="step-item"><div class="step-num">4</div><div class="step-content"><h3>법원 입찰 대리</h3><p>순천법원에 직접 출석해 입찰서 제출부터 개찰까지 대리합니다.</p></div></div>
+      <div class="step-item"><div class="step-num">5</div><div class="step-content"><h3>잔금 · 명도 지원</h3><p>낙찰 후 잔금 납부, 점유자 명도 협의까지 안내합니다.</p></div></div>
+      <div class="step-item"><div class="step-num">6</div><div class="step-content"><h3>낙찰 후 매도 중개</h3><p>투자 목적이라면 매도까지 원스톱으로 연결됩니다.</p></div></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <p class="section-label">Credentials</p>
+    <h2 class="section-title">믿고 맡길 수 있는 이유</h2>
+    <p class="section-desc">자격증과 등록번호가 증명하는 실무 전문가입니다.</p>
+    <div class="cred-grid">
+      <div class="cred-card"><div class="cred-icon">🏛️</div><h3>매수신청대리인 등록</h3><p>광주지방법원<br>등록번호 16-25-6</p></div>
+      <div class="cred-card"><div class="cred-icon">📋</div><h3>공인중개사</h3><p>중개사무소 등록번호<br>46150-2020-00007</p></div>
+      <div class="cred-card"><div class="cred-icon">🛡️</div><h3>법원경매 책임보증</h3><p>매수신청대리<br><strong>보증금액 2억원</strong></p></div>
+      <div class="cred-card"><div class="cred-icon">📊</div><h3>부동산 데이터 분석</h3><p>QGIS 공간분석 기반<br>실거래 데이터 활용</p></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <p class="section-label">Blog</p>
+    <h2 class="section-title">경매 정보, 미리 공부하세요</h2>
+    <p class="section-desc">실무 사례와 분석 자료를 블로그에 꾸준히 올리고 있습니다.</p>
+    <div class="blog-list">
+      <a href="https://blog.naver.com/r-estate119/223852146495" target="_blank" class="blog-card">
+        <div class="blog-card-icon">🏠</div>
+        <div class="blog-card-text"><h3>내 집 마련, 경매가 더 안전하고 저렴한 이유</h3><p>경매 입문 · 절차 안내</p></div>
+        <div class="blog-card-arrow">›</div>
+      </a>
+      <a href="https://blog.naver.com/r-estate119/224269213549" target="_blank" class="blog-card">
+        <div class="blog-card-icon">🗺️</div>
+        <div class="blog-card-text"><h3>QGIS로 보는 순천 경매물건 시각화 분석</h3><p>공간데이터 분석 · 입지 분석</p></div>
+        <div class="blog-card-arrow">›</div>
+      </a>
+    </div>
+    <a href="https://blog.naver.com/r-estate119" target="_blank" class="blog-all-btn">
+      최신 경매 글 전체 보기 →
+    </a>
+  </section>
+
+  <section class="section">
+    <p class="section-label">Useful Links</p>
+    <h2 class="section-title">경매 필수 사이트 바로가기</h2>
+    <p class="section-desc">자주 쓰는 공공 서비스를 한 곳에서 확인하세요.</p>
+    <div class="sites-grid">
+      <a href="https://www.courtauction.go.kr" target="_blank" class="site-card"><div class="site-icon">⚖️</div><div class="site-text"><h4>대법원 법원경매정보</h4><p>물건 검색 · 기일 확인</p></div></a>
+      <a href="https://www.iros.go.kr" target="_blank" class="site-card"><div class="site-icon">📄</div><div class="site-text"><h4>인터넷 등기소</h4><p>등기부등본 열람·발급</p></div></a>
+      <a href="https://www.realtyprice.kr" target="_blank" class="site-card"><div class="site-icon">🏡</div><div class="site-text"><h4>부동산 공시가격 알리미</h4><p>공시지가 · 공동주택가격</p></div></a>
+      <a href="https://rt.molit.go.kr" target="_blank" class="site-card"><div class="site-icon">📈</div><div class="site-text"><h4>국토부 실거래가 공개</h4><p>매매 · 전세 시세 확인</p></div></a>
+    </div>
+  </section>
+
+  <section class="section">
+    <p class="section-label">Location</p>
+    <h2 class="section-title">찾아오시는 길</h2>
+    <p class="section-desc">순천시 해룡면에 위치합니다. 전화 상담 후 방문하시면 됩니다.</p>
+    <img src="반가운약도.jpg" alt="반가운부동산 위치 약도" class="map-img">
+  </section>
+
+</div>
+
+<section class="bottom-cta">
+  <div class="container">
+    <h2>경매 물건,<br><em>상담부터 시작하세요</em></h2>
+    <p>물건 선택부터 낙찰 후 정리까지<br>처음 해보시는 분도 편하게 연락 주세요</p>
+    <div class="cta-row">
+      <a href="tel:010-6482-8545" class="btn btn-call">📞 010-6482-8545</a>
+      <a href="https://open.kakao.com/me/r_estate119" target="_blank" class="btn btn-kakao">💬 카카오 상담</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <p>반가운부동산 · 대표 서정원 · 공인중개사<br>
+    전남 순천시 해룡면 매안3길 43 · Tel. 061-752-8545<br>
+    중개사무소 등록번호 46150-2020-00007 · 매수신청대리인 등록 광주지방법원 16-25-6</p>
+  </div>
+</footer>
+
+</body>
+</html>
