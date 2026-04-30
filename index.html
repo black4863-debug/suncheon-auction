@@ -1,245 +1,359 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>순천 경매 매수신청대리 | 반가운부동산</title>
-<meta name="description" content="순천법원 인근 공인중개사가 직접 진행하는 경매 매수신청대리. 권리분석부터 입찰대리, 낙찰 후 매도까지 원스톱 서비스.">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>경매 매수신청대리 | 반가운부동산</title>
+<meta name="description" content="공인중개사가 직접 상담하는 경매 매수신청대리 랜딩페이지. 권리분석, 현장확인, 입찰가 검토, 입찰대리, 낙찰 후 매도 상담까지 안내합니다." />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
 <style>
-:root {
-  --font: "Pretendard", "Apple SD Gothic Neo", "Noto Sans KR", system-ui, sans-serif;
-  --gold:        #C9A84C;
-  --gold-light:  #E2C46E;
-  --gold-pale:   rgba(201,168,76,0.13);
-  --gold-border: rgba(201,168,76,0.32);
-  --slate-900:   #1C2331;
-  --slate-800:   #242D3D;
-  --bg-page:     #F5F2EC;
-  --bg-card:     #FFFFFF;
-  --text-main:   #1A2030;
-  --text-sub:    rgba(26,32,48,0.58);
-  --text-muted:  rgba(26,32,48,0.36);
-  --border:      rgba(26,32,48,0.08);
-  --shadow:      0 2px 16px rgba(26,32,48,0.07), 0 0 0 1px var(--border);
-  --shadow-hover:0 8px 28px rgba(26,32,48,0.13);
-  --shadow-btn:  0 4px 18px rgba(201,168,76,0.38);
+:root{
+  --font:"Pretendard","Apple SD Gothic Neo","Noto Sans KR",system-ui,sans-serif;
+  --navy:#111827;
+  --navy-2:#172033;
+  --navy-3:#243047;
+  --gold:#C9A84C;
+  --gold-2:#E4C56E;
+  --gold-soft:rgba(201,168,76,.14);
+  --cream:#F7F2E8;
+  --cream-2:#FFFDF8;
+  --text:#182033;
+  --sub:rgba(24,32,51,.66);
+  --muted:rgba(24,32,51,.44);
+  --line:rgba(24,32,51,.10);
+  --white:#fff;
+  --shadow:0 14px 38px rgba(17,24,39,.10);
+  --shadow-soft:0 6px 22px rgba(17,24,39,.08);
 }
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-*{word-break:keep-all;}
+*{box-sizing:border-box;margin:0;padding:0;word-break:keep-all;}
 html{scroll-behavior:smooth;}
-body{font-family:var(--font);background:var(--bg-page);color:var(--text-main);-webkit-font-smoothing:antialiased;line-height:1.6;}
+body{font-family:var(--font);background:var(--cream);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased;padding-bottom:84px;}
 a{text-decoration:none;color:inherit;}
-img{max-width:100%;display:block;}
-.container{max-width:740px;margin:0 auto;padding:0 28px;}
+img{display:block;max-width:100%;}
+.container{max-width:1080px;margin:0 auto;padding:0 24px;}
 
-/* ── HERO ── */
-.hero{background:linear-gradient(145deg,#111827 0%,#0A0F1A 100%);padding:56px 28px 0;position:relative;overflow:hidden;}
-.hero::before{content:'';position:absolute;top:-80px;right:-40px;width:400px;height:400px;background:radial-gradient(circle,rgba(201,168,76,0.10) 0%,transparent 65%);pointer-events:none;}
-.hero-inner{max-width:740px;margin:0 auto;display:flex;align-items:flex-end;gap:0;position:relative;z-index:1;}
-.hero-text{flex:1;min-width:0;padding-bottom:44px;}
-.hero-photo{flex-shrink:0;width:380px;align-self:flex-end;margin-bottom:-56px;margin-right:-28px;-webkit-mask-image:linear-gradient(to bottom,black 55%,transparent 88%);mask-image:linear-gradient(to bottom,black 55%,transparent 88%);}
-.hero-photo img{width:100%;display:block;object-fit:contain;object-position:bottom center;}
+/* Header */
+.topbar{position:sticky;top:0;z-index:50;background:rgba(255,253,248,.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);}
+.topbar-inner{max-width:1080px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;}
+.brand{display:flex;align-items:center;gap:10px;font-weight:900;letter-spacing:-.03em;color:var(--navy);font-size:20px;}
+.brand-mark{width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--gold-2));display:flex;align-items:center;justify-content:center;color:var(--navy);font-weight:900;}
+.top-actions{display:flex;align-items:center;gap:8px;}
+.top-btn{height:40px;padding:0 16px;border-radius:999px;display:inline-flex;align-items:center;justify-content:center;font-weight:800;font-size:14px;border:1px solid var(--line);background:#fff;}
+.top-btn.gold{border:none;background:var(--gold);color:var(--navy);box-shadow:0 7px 20px rgba(201,168,76,.28);}
+@media(max-width:560px){.topbar-inner{padding:12px 18px}.brand{font-size:18px}.top-btn.blog-top{display:none}.top-btn{height:38px;padding:0 13px;font-size:13px}}
 
-.hero-badge{display:inline-flex;align-items:center;gap:7px;background:var(--gold-pale);border:1px solid var(--gold-border);color:var(--gold-light);font-size:12px;font-weight:700;letter-spacing:.05em;padding:6px 16px;border-radius:999px;margin-bottom:22px;}
-.hero-badge b{width:6px;height:6px;border-radius:50%;background:var(--gold);display:inline-block;}
-.hero h1{font-size:clamp(32px,5.5vw,48px);font-weight:800;letter-spacing:-.030em;line-height:1.22;color:#F5F0E8;margin-bottom:18px;}
-.hero h1 em{color:var(--gold-light);font-style:normal;}
-.hero-sub{font-size:16px;color:rgba(245,240,232,0.65);line-height:1.8;margin-bottom:28px;max-width:380px;}
-.cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:24px;}
-.btn{display:inline-flex;align-items:center;gap:9px;padding:0 28px;height:54px;border-radius:999px;font-size:16px;font-weight:700;letter-spacing:-.01em;cursor:pointer;transition:all .15s;border:none;white-space:nowrap;font-family:var(--font);}
-.btn:active{transform:scale(.97);}
-.btn-call{background:var(--gold);color:#0A0F1A;box-shadow:var(--shadow-btn);}
-.btn-call:hover{background:var(--gold-light);}
-.btn-kakao{background:#FEE500;color:#3A1D1D;}
-.btn-kakao:hover{opacity:.88;}
-.hero-trust{display:flex;gap:20px;flex-wrap:wrap;}
-.trust-item{font-size:12px;color:rgba(245,240,232,0.42);display:flex;align-items:center;gap:6px;}
-.trust-dot{width:5px;height:5px;border-radius:50%;background:var(--gold);opacity:.8;flex-shrink:0;}
-
-/* ── Section ── */
-.section{padding:44px 0;}
-.section+.section{border-top:1px solid var(--border);}
-.section-label{font-size:11px;font-weight:800;letter-spacing:.12em;color:var(--gold);text-transform:uppercase;margin-bottom:6px;}
-.section-title{font-size:clamp(24px,4vw,32px);font-weight:800;letter-spacing:-.026em;line-height:1.28;margin-bottom:8px;color:var(--text-main);}
-.section-title em{color:var(--gold);font-style:normal;}
-.section-desc{font-size:15px;color:var(--text-sub);line-height:1.7;margin-bottom:24px;}
-
-/* ── Steps ── */
-.steps{display:flex;flex-direction:column;gap:8px;}
-.step-item{display:flex;align-items:flex-start;gap:16px;background:var(--bg-card);border-radius:14px;padding:18px 22px;box-shadow:var(--shadow);transition:box-shadow .15s;}
-.step-item:hover{box-shadow:var(--shadow-hover);}
-.step-num{flex-shrink:0;width:36px;height:36px;border-radius:50%;background:var(--gold-pale);border:2px solid var(--gold-border);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:800;color:var(--gold);}
-.step-content h3{font-size:17px;font-weight:700;letter-spacing:-.015em;margin-bottom:4px;color:var(--text-main);}
-.step-content p{font-size:14px;color:var(--text-sub);line-height:1.65;}
-
-/* ── Cred ── */
-.cred-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
-@media(max-width:480px){.cred-grid{grid-template-columns:1fr;}}
-.cred-card{background:var(--bg-card);border-radius:14px;padding:22px;box-shadow:var(--shadow);border-left:3px solid var(--gold);}
-.cred-icon{font-size:24px;margin-bottom:12px;}
-.cred-card h3{font-size:15px;font-weight:700;color:var(--text-main);margin-bottom:5px;}
-.cred-card p{font-size:14px;color:var(--text-sub);line-height:1.65;}
-
-/* ── Blog ── */
-.blog-list{display:flex;flex-direction:column;gap:8px;}
-.blog-card{display:flex;align-items:center;gap:16px;background:var(--bg-card);border-radius:14px;padding:18px 22px;box-shadow:var(--shadow);transition:all .15s;}
-.blog-card:hover{box-shadow:var(--shadow-hover);transform:translateY(-1px);}
-.blog-card-icon{flex-shrink:0;width:44px;height:44px;background:var(--gold-pale);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;}
-.blog-card-text{flex:1;}
-.blog-card-text h3{font-size:16px;font-weight:700;letter-spacing:-.015em;margin-bottom:3px;line-height:1.4;}
-.blog-card-text p{font-size:13px;color:var(--text-muted);}
-.blog-card-arrow{flex-shrink:0;color:var(--gold);font-size:22px;font-weight:700;}
-.blog-all-btn{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;height:58px;border-radius:14px;background:var(--gold);border:none;color:#0A0F1A;font-size:17px;font-weight:800;margin-top:10px;box-shadow:var(--shadow-btn);transition:all .15s;font-family:var(--font);cursor:pointer;letter-spacing:-.01em;}
-.blog-all-btn:hover{background:var(--gold-light);transform:translateY(-1px);}
-
-/* ── Sites ── */
-.sites-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
-@media(max-width:400px){.sites-grid{grid-template-columns:1fr;}}
-.site-card{display:flex;align-items:center;gap:14px;background:var(--bg-card);border-radius:12px;padding:16px 18px;box-shadow:var(--shadow);transition:box-shadow .15s;}
-.site-card:hover{box-shadow:var(--shadow-hover);}
-.site-icon{flex-shrink:0;width:38px;height:38px;background:var(--gold-pale);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px;}
-.site-text h4{font-size:15px;font-weight:700;margin-bottom:2px;line-height:1.3;}
-.site-text p{font-size:12px;color:var(--text-muted);}
-
-/* ── Location ── */
-.map-img{border-radius:14px;width:100%;box-shadow:var(--shadow);}
-
-/* ── Bottom CTA ── */
-.bottom-cta{background:linear-gradient(135deg,#111827 0%,#0A0F1A 100%);padding:56px 28px;text-align:center;}
-.bottom-cta h2{font-size:clamp(26px,4vw,36px);font-weight:800;letter-spacing:-.026em;line-height:1.28;color:#F5F0E8;margin-bottom:12px;}
-.bottom-cta h2 em{color:var(--gold-light);font-style:normal;}
-.bottom-cta p{font-size:16px;color:rgba(245,240,232,0.55);margin-bottom:32px;line-height:1.8;}
-.bottom-cta .cta-row{justify-content:center;}
-
-/* ── Footer ── */
-.footer{background:#0A0F1A;border-top:1px solid rgba(255,255,255,0.06);padding:28px 24px;text-align:center;}
-.footer p{font-size:12px;color:rgba(255,255,255,0.28);line-height:2;}
-
-/* ── Mobile ── */
-@media(max-width:580px){
-  .hero{padding:40px 20px 0;}
-  .hero-inner{flex-direction:column;align-items:center;text-align:center;}
-  .hero-text{padding-bottom:20px;}
-  .hero-photo{width:200px;margin-right:0;}
-  .hero-sub{margin-left:auto;margin-right:auto;}
-  .cta-row{justify-content:center;}
-  .hero-trust{justify-content:center;}
+/* Hero */
+.hero{position:relative;overflow:hidden;background:linear-gradient(145deg,#121927 0%,#0B0F19 58%,#161F31 100%);}
+.hero::before{content:"";position:absolute;inset:auto -160px -220px auto;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(201,168,76,.18),transparent 68%);pointer-events:none;}
+.hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:70px;background:linear-gradient(to top,rgba(247,242,232,.92),rgba(247,242,232,0));pointer-events:none;}
+.hero-inner{position:relative;z-index:2;max-width:1080px;margin:0 auto;padding:72px 24px 0;display:grid;grid-template-columns:1.05fr .95fr;align-items:end;gap:18px;}
+.hero-copy{padding-bottom:92px;}
+.badge{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(228,197,110,.32);background:rgba(201,168,76,.12);color:var(--gold-2);padding:8px 15px;border-radius:999px;font-size:14px;font-weight:800;margin-bottom:22px;}
+.badge i{width:7px;height:7px;border-radius:50%;background:var(--gold-2);display:block;}
+.hero h1{color:#fff;font-size:clamp(42px,6vw,68px);line-height:1.12;letter-spacing:-.055em;font-weight:900;margin-bottom:22px;}
+.hero h1 em{font-style:normal;color:var(--gold-2);}
+.hero-desc{font-size:20px;line-height:1.78;color:rgba(255,255,255,.72);max-width:560px;margin-bottom:30px;}
+.hero-desc strong{color:#fff;font-weight:800;}
+.hero-buttons{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:24px;}
+.btn{height:58px;padding:0 25px;border-radius:999px;display:inline-flex;align-items:center;justify-content:center;gap:8px;font-size:17px;font-weight:900;letter-spacing:-.02em;transition:.18s ease;white-space:nowrap;}
+.btn:hover{transform:translateY(-2px);}
+.btn-call{background:var(--gold);color:#0B0F19;box-shadow:0 12px 30px rgba(201,168,76,.34);}
+.btn-kakao{background:#FEE500;color:#2A1A00;}
+.btn-outline{border:1px solid rgba(255,255,255,.24);color:#fff;background:rgba(255,255,255,.07);}
+.btn-court{border:1px solid rgba(228,197,110,.38);color:var(--gold-2);background:rgba(201,168,76,.10);}
+.trust-row{display:flex;flex-wrap:wrap;gap:10px;}
+.trust{display:inline-flex;align-items:center;gap:7px;color:rgba(255,255,255,.58);font-size:14px;font-weight:700;}
+.trust::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--gold-2);}
+.hero-visual{position:relative;min-height:560px;display:flex;align-items:flex-end;justify-content:center;}
+.hero-photo-wrap{position:relative;width:min(430px,94%);margin-bottom:0;}
+.hero-photo-wrap::before{content:"";position:absolute;left:50%;bottom:38px;transform:translateX(-50%);width:80%;height:64%;border-radius:48% 48% 12% 12%;background:radial-gradient(circle at 50% 42%,rgba(255,255,255,.16),rgba(201,168,76,.08) 44%,transparent 72%);filter:blur(2px);z-index:0;}
+.hero-photo{position:relative;z-index:1;width:100%;object-fit:contain;filter:drop-shadow(0 26px 35px rgba(0,0,0,.28));}
+.photo-note{position:absolute;right:0;bottom:84px;background:rgba(255,255,255,.92);border:1px solid rgba(255,255,255,.62);border-radius:18px;padding:14px 16px;box-shadow:var(--shadow);z-index:3;min-width:190px;}
+.photo-note b{display:block;font-size:15px;color:var(--navy);letter-spacing:-.02em;}
+.photo-note span{display:block;font-size:13px;color:var(--sub);margin-top:2px;}
+@media(max-width:820px){
+  .hero-inner{grid-template-columns:1fr;text-align:center;padding-top:54px;}
+  .hero-copy{padding-bottom:16px;}
+  .hero-desc{margin-left:auto;margin-right:auto;font-size:18px;}
+  .hero-buttons,.trust-row{justify-content:center;}
+  .hero-visual{min-height:auto;}
+  .hero-photo-wrap{width:min(290px,78%);}
+  .photo-note{display:none;}
 }
+@media(max-width:430px){.hero h1{font-size:40px}.btn{width:100%;height:54px}.hero-buttons{gap:9px}.hero-photo-wrap{width:270px}.hero-desc{font-size:17px}}
+
+/* Sections */
+.section{padding:72px 0;}
+.section-head{margin-bottom:28px;}
+.label{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);font-weight:900;margin-bottom:7px;}
+.section-title{font-size:clamp(30px,4.4vw,44px);line-height:1.22;letter-spacing:-.045em;font-weight:900;color:var(--navy);}
+.section-title em{font-style:normal;color:var(--gold);}
+.section-desc{margin-top:12px;font-size:18px;color:var(--sub);line-height:1.75;max-width:760px;}
+
+/* Worry cards */
+.worry-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+.worry-card{background:#fff;border:1px solid var(--line);border-radius:22px;padding:24px 22px;box-shadow:var(--shadow-soft);}
+.worry-card .icon{font-size:28px;margin-bottom:12px;}
+.worry-card h3{font-size:20px;line-height:1.35;letter-spacing:-.03em;color:var(--navy);margin-bottom:8px;}
+.worry-card p{font-size:15px;color:var(--sub);line-height:1.65;}
+@media(max-width:820px){.worry-grid{grid-template-columns:1fr}}
+
+/* Process */
+.process{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;}
+.process-item{position:relative;background:#fff;border:1px solid var(--line);border-radius:20px;padding:22px 18px;box-shadow:var(--shadow-soft);}
+.num{width:34px;height:34px;border-radius:50%;background:var(--gold-soft);color:var(--gold);font-weight:900;display:flex;align-items:center;justify-content:center;margin-bottom:14px;border:1px solid rgba(201,168,76,.28);}
+.process-item h3{font-size:18px;letter-spacing:-.025em;color:var(--navy);margin-bottom:7px;line-height:1.35;}
+.process-item p{font-size:14px;color:var(--sub);line-height:1.6;}
+@media(max-width:960px){.process{grid-template-columns:1fr 1fr}.process-item:last-child{grid-column:1/-1}}
+@media(max-width:520px){.process{grid-template-columns:1fr}}
+
+/* Blog highlight */
+.blog-section{background:linear-gradient(135deg,#FFFDF8 0%,#F4EBD8 100%);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+.blog-box{display:grid;grid-template-columns:1fr 340px;gap:24px;align-items:center;background:#fff;border:1px solid rgba(201,168,76,.24);border-radius:28px;padding:34px;box-shadow:0 18px 50px rgba(201,168,76,.16);}
+.blog-copy h2{font-size:clamp(30px,4.4vw,46px);line-height:1.18;letter-spacing:-.05em;color:var(--navy);font-weight:950;margin-bottom:14px;}
+.blog-copy h2 em{font-style:normal;color:var(--gold);}
+.blog-copy p{font-size:18px;color:var(--sub);line-height:1.75;margin-bottom:22px;}
+.blog-cta{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:64px;padding:0 30px;border-radius:18px;background:linear-gradient(135deg,var(--gold),var(--gold-2));color:#101827;font-size:19px;font-weight:950;box-shadow:0 14px 34px rgba(201,168,76,.38);animation:blogPulse 1.8s ease-in-out infinite;}
+.blog-cta:hover{transform:translateY(-2px);animation:none;}
+@keyframes blogPulse{0%,100%{box-shadow:0 14px 34px rgba(201,168,76,.34)}50%{box-shadow:0 14px 46px rgba(201,168,76,.62),0 0 0 8px rgba(201,168,76,.12)}}
+.blog-list{display:grid;gap:10px;}
+.blog-mini{background:var(--cream-2);border:1px solid var(--line);border-radius:18px;padding:17px 18px;}
+.blog-mini b{display:block;color:var(--navy);font-size:16px;letter-spacing:-.02em;margin-bottom:4px;}
+.blog-mini span{display:block;color:var(--muted);font-size:13px;}
+@media(max-width:860px){.blog-box{grid-template-columns:1fr;padding:26px}.blog-cta{width:100%}}
+
+/* Info grid */
+.info-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:18px;}
+.info-card{background:#fff;border:1px solid var(--line);border-radius:24px;padding:28px;box-shadow:var(--shadow-soft);}
+.info-card h3{font-size:22px;color:var(--navy);letter-spacing:-.035em;margin-bottom:14px;}
+.check-list{display:grid;gap:11px;}
+.check-list li{list-style:none;display:flex;gap:10px;font-size:16px;color:var(--sub);line-height:1.6;}
+.check-list li::before{content:"✓";width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;background:var(--gold-soft);color:var(--gold);font-weight:900;margin-top:2px;}
+.small-notice{font-size:13px;color:var(--muted);line-height:1.75;margin-top:16px;padding-top:16px;border-top:1px solid var(--line);}
+@media(max-width:820px){.info-grid{grid-template-columns:1fr}}
+
+/* Location */
+.location-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:22px;align-items:start;}
+.location-card{background:#fff;border:1px solid var(--line);border-radius:24px;padding:28px;box-shadow:var(--shadow-soft);}
+.addr{font-size:20px;font-weight:900;color:var(--navy);line-height:1.5;margin:12px 0 14px;}
+.location-card p{color:var(--sub);font-size:16px;line-height:1.75;}
+.map-img{width:100%;border-radius:24px;border:1px solid var(--line);box-shadow:var(--shadow);background:#fff;}
+.map-caption{font-size:13px;color:var(--muted);margin-top:10px;line-height:1.6;}
+@media(max-width:860px){.location-grid{grid-template-columns:1fr}.location-card{order:2}.map-wrap{order:1}}
+
+/* Final CTA */
+.final-cta{background:linear-gradient(135deg,#101827,#172033);color:#fff;text-align:center;padding:70px 24px;}
+.final-cta h2{font-size:clamp(30px,4.5vw,48px);line-height:1.22;letter-spacing:-.05em;font-weight:950;margin-bottom:14px;}
+.final-cta h2 em{font-style:normal;color:var(--gold-2);}
+.final-cta p{font-size:18px;color:rgba(255,255,255,.68);line-height:1.75;margin-bottom:28px;}
+.final-buttons{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;}
+
+/* Footer */
+.footer{background:#0B0F19;color:rgba(255,255,255,.46);padding:34px 24px;text-align:center;}
+.footer strong{color:rgba(255,255,255,.74);font-weight:800;}
+.footer p{font-size:13px;line-height:1.9;}
+
+/* Sticky mobile CTA */
+.sticky-cta{position:fixed;left:0;right:0;bottom:0;z-index:100;background:rgba(255,253,248,.95);border-top:1px solid var(--line);backdrop-filter:blur(14px);padding:10px 14px calc(10px + env(safe-area-inset-bottom));display:flex;gap:8px;box-shadow:0 -10px 24px rgba(17,24,39,.10);}
+.sticky-cta a{flex:1;height:50px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-weight:950;font-size:15px;letter-spacing:-.02em;}
+.sticky-call{background:var(--gold);color:#101827;}
+.sticky-blog{background:var(--navy);color:#fff;}
+.sticky-kakao{background:#FEE500;color:#2A1A00;}
+@media(min-width:821px){.sticky-cta{max-width:560px;left:50%;transform:translateX(-50%);bottom:18px;border:1px solid var(--line);border-radius:22px;padding:10px;box-shadow:0 16px 42px rgba(17,24,39,.18)}}
+@media(max-width:420px){.sticky-cta{gap:6px;padding-left:8px;padding-right:8px}.sticky-cta a{font-size:14px}}
 </style>
 </head>
 <body>
 
-<section class="hero">
-  <div class="hero-inner">
-    <div class="hero-text">
-      <div class="hero-badge"><b></b>순천법원 인근 · 매수신청대리인 등록</div>
-      <h1>순천 경매,<br><em>처음부터 끝까지</em><br>직접 진행합니다</h1>
-      <p class="hero-sub">권리분석 · 현장확인 · 입찰대리 · 낙찰 후 매도까지<br>공인중개사가 원스톱으로 처리해드립니다</p>
-      <div class="cta-row">
-        <a href="tel:010-6482-8545" class="btn btn-call">📞 010-6482-8545</a>
-        <a href="https://open.kakao.com/me/r_estate119" target="_blank" class="btn btn-kakao">💬 카카오 상담</a>
-      </div>
-      <div class="hero-trust">
-        <span class="trust-item"><span class="trust-dot"></span>공인중개사</span>
-        <span class="trust-item"><span class="trust-dot"></span>광주지방법원 등록 매수신청대리인</span>
-        <span class="trust-item"><span class="trust-dot"></span>책임보증 2억원</span>
-      </div>
-    </div>
-    <div class="hero-photo">
-      <img src="photo.png" alt="반가운부동산 대표 서정원 공인중개사">
-    </div>
-  </div>
-</section>
-
-<div class="container">
-
-  <section class="section">
-    <p class="section-label">Service Process</p>
-    <h2 class="section-title">입찰에서 마무리까지<br><em>6단계 완전 대행</em></h2>
-    <p class="section-desc">타지에 계셔도 괜찮습니다. 순천 현지에서 발로 뛰며 직접 처리합니다.</p>
-    <div class="steps">
-      <div class="step-item"><div class="step-num">1</div><div class="step-content"><h3>물건 검토 · 권리분석</h3><p>등기부등본, 배당표, 임차인 현황 분석. 위험 물건은 미리 걸러드립니다.</p></div></div>
-      <div class="step-item"><div class="step-num">2</div><div class="step-content"><h3>현장 임장</h3><p>직접 현장을 방문해 점유 상태, 건물 상태, 주변 시세를 확인합니다.</p></div></div>
-      <div class="step-item"><div class="step-num">3</div><div class="step-content"><h3>입찰가 전략 수립</h3><p>실거래가 데이터와 현장 분석을 바탕으로 최적 입찰가를 함께 설계합니다.</p></div></div>
-      <div class="step-item"><div class="step-num">4</div><div class="step-content"><h3>법원 입찰 대리</h3><p>순천법원에 직접 출석해 입찰서 제출부터 개찰까지 대리합니다.</p></div></div>
-      <div class="step-item"><div class="step-num">5</div><div class="step-content"><h3>잔금 · 명도 지원</h3><p>낙찰 후 잔금 납부, 점유자 명도 협의까지 안내합니다.</p></div></div>
-      <div class="step-item"><div class="step-num">6</div><div class="step-content"><h3>낙찰 후 매도 중개</h3><p>투자 목적이라면 매도까지 원스톱으로 연결됩니다.</p></div></div>
-    </div>
-  </section>
-
-  <section class="section">
-    <p class="section-label">Credentials</p>
-    <h2 class="section-title">믿고 맡길 수 있는 이유</h2>
-    <p class="section-desc">자격증과 등록번호가 증명하는 실무 전문가입니다.</p>
-    <div class="cred-grid">
-      <div class="cred-card"><div class="cred-icon">🏛️</div><h3>매수신청대리인 등록</h3><p>광주지방법원<br>등록번호 16-25-6</p></div>
-      <div class="cred-card"><div class="cred-icon">📋</div><h3>공인중개사</h3><p>중개사무소 등록번호<br>46150-2020-00007</p></div>
-      <div class="cred-card"><div class="cred-icon">🛡️</div><h3>법원경매 책임보증</h3><p>매수신청대리<br><strong>보증금액 2억원</strong></p></div>
-      <div class="cred-card"><div class="cred-icon">📊</div><h3>부동산 데이터 분석</h3><p>QGIS 공간분석 기반<br>실거래 데이터 활용</p></div>
-    </div>
-  </section>
-
-  <section class="section">
-    <p class="section-label">Blog</p>
-    <h2 class="section-title">경매 정보, 미리 공부하세요</h2>
-    <p class="section-desc">실무 사례와 분석 자료를 블로그에 꾸준히 올리고 있습니다.</p>
-    <div class="blog-list">
-      <a href="https://blog.naver.com/r-estate119/223852146495" target="_blank" class="blog-card">
-        <div class="blog-card-icon">🏠</div>
-        <div class="blog-card-text"><h3>내 집 마련, 경매가 더 안전하고 저렴한 이유</h3><p>경매 입문 · 절차 안내</p></div>
-        <div class="blog-card-arrow">›</div>
-      </a>
-      <a href="https://blog.naver.com/r-estate119/224269213549" target="_blank" class="blog-card">
-        <div class="blog-card-icon">🗺️</div>
-        <div class="blog-card-text"><h3>QGIS로 보는 순천 경매물건 시각화 분석</h3><p>공간데이터 분석 · 입지 분석</p></div>
-        <div class="blog-card-arrow">›</div>
-      </a>
-    </div>
-    <a href="https://blog.naver.com/r-estate119" target="_blank" class="blog-all-btn">
-      최신 경매 글 전체 보기 →
+<header class="topbar">
+  <div class="topbar-inner">
+    <a href="#top" class="brand" aria-label="반가운부동산 홈">
+      <span class="brand-mark">반</span>
+      <span>반가운부동산</span>
     </a>
-  </section>
-
-  <section class="section">
-    <p class="section-label">Useful Links</p>
-    <h2 class="section-title">경매 필수 사이트 바로가기</h2>
-    <p class="section-desc">자주 쓰는 공공 서비스를 한 곳에서 확인하세요.</p>
-    <div class="sites-grid">
-      <a href="https://www.courtauction.go.kr" target="_blank" class="site-card"><div class="site-icon">⚖️</div><div class="site-text"><h4>대법원 법원경매정보</h4><p>물건 검색 · 기일 확인</p></div></a>
-      <a href="https://www.iros.go.kr" target="_blank" class="site-card"><div class="site-icon">📄</div><div class="site-text"><h4>인터넷 등기소</h4><p>등기부등본 열람·발급</p></div></a>
-      <a href="https://www.realtyprice.kr" target="_blank" class="site-card"><div class="site-icon">🏡</div><div class="site-text"><h4>부동산 공시가격 알리미</h4><p>공시지가 · 공동주택가격</p></div></a>
-      <a href="https://rt.molit.go.kr" target="_blank" class="site-card"><div class="site-icon">📈</div><div class="site-text"><h4>국토부 실거래가 공개</h4><p>매매 · 전세 시세 확인</p></div></a>
-    </div>
-  </section>
-
-  <section class="section">
-    <p class="section-label">Location</p>
-    <h2 class="section-title">찾아오시는 길</h2>
-    <p class="section-desc">순천시 해룡면에 위치합니다. 전화 상담 후 방문하시면 됩니다.</p>
-    <img src="반가운약도.jpg" alt="반가운부동산 위치 약도" class="map-img">
-  </section>
-
-</div>
-
-<section class="bottom-cta">
-  <div class="container">
-    <h2>경매 물건,<br><em>상담부터 시작하세요</em></h2>
-    <p>물건 선택부터 낙찰 후 정리까지<br>처음 해보시는 분도 편하게 연락 주세요</p>
-    <div class="cta-row">
-      <a href="tel:010-6482-8545" class="btn btn-call">📞 010-6482-8545</a>
-      <a href="https://open.kakao.com/me/r_estate119" target="_blank" class="btn btn-kakao">💬 카카오 상담</a>
+    <div class="top-actions">
+      <a class="top-btn blog-top" href="https://blog.naver.com/r-estate119" target="_blank" rel="noopener">블로그 보기</a>
+      <a class="top-btn gold" href="tel:010-6482-8545">전화상담</a>
     </div>
   </div>
-</section>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <div class="badge"><i></i>법원 매수신청대리 상담</div>
+        <h1>경매 입찰,<br /><em>혼자 판단하지</em><br />마세요</h1>
+        <p class="hero-desc">
+          권리분석부터 현장확인, 입찰가 검토, 입찰대리까지<br />
+          <strong>공인중개사가 직접 확인하고 상담합니다.</strong>
+        </p>
+        <div class="hero-buttons">
+          <a href="tel:010-6482-8545" class="btn btn-call">📞 010-6482-8545</a>
+          <a href="https://open.kakao.com/me/r_estate119" target="_blank" rel="noopener" class="btn btn-kakao">💬 카카오 상담</a>
+          <a href="https://blog.naver.com/r-estate119" target="_blank" rel="noopener" class="btn btn-outline">블로그 사례 보기</a>
+          <a href="https://www.courtauction.go.kr" target="_blank" rel="noopener" class="btn btn-court">대법원경매 바로가기</a>
+        </div>
+        <div class="trust-row">
+          <span class="trust">공인중개사 직접 상담</span>
+          <span class="trust">매수신청대리 등록</span>
+          <span class="trust">권리분석 · 입찰가 검토</span>
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-label="대표 공인중개사 사진 영역">
+        <div class="hero-photo-wrap">
+          <img class="hero-photo" src="photo.png" alt="반가운부동산 대표 공인중개사" />
+          <div class="photo-note">
+            <b>경매 상담은 신중하게</b>
+            <span>자료 확인 후 판단 근거를 설명드립니다</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div class="label">WHY</div>
+        <h2 class="section-title">경매는 싸게 사는 것보다<br /><em>잘못 사지 않는 것</em>이 먼저입니다</h2>
+        <p class="section-desc">등기부, 임차인, 현장 상태, 시세, 예상 비용을 따로 보면 판단이 흔들립니다. 입찰 전 핵심 위험 요소를 함께 정리해드립니다.</p>
+      </div>
+      <div class="worry-grid">
+        <article class="worry-card">
+          <div class="icon">📄</div>
+          <h3>권리관계가 복잡할 때</h3>
+          <p>말소기준권리, 임차인 대항력, 배당 가능성 등 입찰 전 확인이 필요한 부분을 검토합니다.</p>
+        </article>
+        <article class="worry-card">
+          <div class="icon">🏠</div>
+          <h3>현장 상황이 불확실할 때</h3>
+          <p>사진만 보고 판단하기 어려운 점유, 관리상태, 주변 입지, 실제 이용 가능성을 함께 봅니다.</p>
+        </article>
+        <article class="worry-card">
+          <div class="icon">💰</div>
+          <h3>입찰가가 고민될 때</h3>
+          <p>감정가만 보지 않고 실거래, 호가, 낙찰 사례, 향후 매도 가능성을 함께 비교합니다.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:54px;">
+    <div class="container">
+      <div class="section-head">
+        <div class="label">PROCESS</div>
+        <h2 class="section-title">상담은 이렇게 진행됩니다</h2>
+        <p class="section-desc">무조건 입찰을 권하지 않습니다. 확인이 필요한 부분은 확인 필요로 구분하고, 입찰 판단에 필요한 근거를 먼저 정리합니다.</p>
+      </div>
+      <div class="process">
+        <article class="process-item"><div class="num">1</div><h3>물건 접수</h3><p>사건번호 또는 관심 물건을 기준으로 기본 정보를 확인합니다.</p></article>
+        <article class="process-item"><div class="num">2</div><h3>권리분석</h3><p>등기부, 임차인, 배당, 인수 가능성을 중심으로 검토합니다.</p></article>
+        <article class="process-item"><div class="num">3</div><h3>시세 비교</h3><p>실거래가, 현재 매물, 낙찰 사례를 비교해 적정 범위를 봅니다.</p></article>
+        <article class="process-item"><div class="num">4</div><h3>입찰 전략</h3><p>예상 비용과 리스크를 반영해 입찰가 판단 기준을 세웁니다.</p></article>
+        <article class="process-item"><div class="num">5</div><h3>입찰대리</h3><p>필요 시 법원 매수신청대리 절차로 입찰을 도와드립니다.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section blog-section" id="blog">
+    <div class="container">
+      <div class="blog-box">
+        <div class="blog-copy">
+          <div class="label">BLOG BRIEFING</div>
+          <h2>실제 경매 물건 분석은<br /><em>블로그에서 먼저 확인하세요</em></h2>
+          <p>권리분석, 입찰가 판단, 낙찰 후 전략을 사례 중심으로 정리해두었습니다. 상담 전 블로그 글을 보시면 판단 기준을 더 쉽게 잡을 수 있습니다.</p>
+          <a class="blog-cta" href="https://blog.naver.com/r-estate119" target="_blank" rel="noopener">👉 경매 분석 글 보러가기</a>
+        </div>
+        <div class="blog-list">
+          <div class="blog-mini"><b>권리분석 포인트</b><span>말소기준권리 · 임차인 · 배당 검토</span></div>
+          <div class="blog-mini"><b>입찰가 판단 근거</b><span>실거래가 · 호가 · 낙찰사례 비교</span></div>
+          <div class="blog-mini"><b>낙찰 후 전략</b><span>명도 · 보유 · 매도 가능성 검토</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="info-grid">
+        <div class="info-card">
+          <h3>상담 시 함께 보는 항목</h3>
+          <ul class="check-list">
+            <li>등기부상 권리관계와 말소·인수 가능성</li>
+            <li>임차인 현황, 대항력, 배당요구 여부</li>
+            <li>현장 확인이 필요한 점유·관리·수리 상태</li>
+            <li>실거래가, 호가, 인근 낙찰 사례 비교</li>
+            <li>취득 후 보유·임대·매도 가능성</li>
+          </ul>
+        </div>
+        <div class="info-card">
+          <h3>반가운부동산 상담 원칙</h3>
+          <ul class="check-list">
+            <li>확인된 내용과 확인 필요 내용을 구분합니다</li>
+            <li>무리한 입찰보다 안전한 판단을 우선합니다</li>
+            <li>입찰 전 비용과 리스크를 함께 설명합니다</li>
+            <li>상담 후 결정은 고객의 상황에 맞춰 진행합니다</li>
+          </ul>
+          <p class="small-notice">※ 경매 물건은 사건별 사실관계에 따라 판단이 달라질 수 있습니다. 상담 시 사건번호와 관련 자료를 함께 확인합니다.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="location">
+    <div class="container">
+      <div class="section-head">
+        <div class="label">LOCATION</div>
+        <h2 class="section-title">찾아오시는 길</h2>
+      </div>
+      <div class="location-grid">
+        <div class="location-card">
+          <div class="label">반가운부동산</div>
+          <div class="addr">순천시 해룡면 매안3길 43, 1층</div>
+          <p>상담 전 전화 또는 카카오 상담으로 방문 가능 시간을 먼저 확인해 주세요. 사건번호가 있으면 더 빠르게 검토할 수 있습니다.</p>
+          <div style="margin-top:20px;display:flex;gap:10px;flex-wrap:wrap;">
+            <a href="tel:010-6482-8545" class="btn btn-call" style="height:52px;font-size:16px;">전화 상담</a>
+            <a href="https://open.kakao.com/me/r_estate119" target="_blank" rel="noopener" class="btn btn-kakao" style="height:52px;font-size:16px;">카카오 상담</a>
+          </div>
+        </div>
+        <div class="map-wrap">
+          <img class="map-img" src="반가운약도.jpg" alt="반가운부동산 찾아오시는 길 약도" />
+          <p class="map-caption">약도 이미지가 보이지 않으면 저장소에 <strong>반가운약도.jpg</strong> 파일명이 정확히 업로드되어 있는지 확인하세요.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="final-cta">
+    <div class="container">
+      <h2>입찰 전, <em>한 번 더 확인하고</em><br />결정하세요</h2>
+      <p>사건번호 또는 관심 물건을 보내주시면 상담 가능한 범위부터 안내드립니다.</p>
+      <div class="final-buttons">
+        <a href="tel:010-6482-8545" class="btn btn-call">📞 전화 상담하기</a>
+        <a href="https://open.kakao.com/me/r_estate119" target="_blank" rel="noopener" class="btn btn-kakao">💬 카카오 상담하기</a>
+        <a href="https://blog.naver.com/r-estate119" target="_blank" rel="noopener" class="btn btn-outline">블로그 보기</a>
+        <a href="https://www.courtauction.go.kr" target="_blank" rel="noopener" class="btn btn-court">대법원경매 바로가기</a>
+      </div>
+    </div>
+  </section>
+</main>
 
 <footer class="footer">
-  <div class="container">
-    <p>반가운부동산 · 대표 서정원 · 공인중개사<br>
-    전남 순천시 해룡면 매안3길 43 · Tel. 061-752-8545<br>
-    중개사무소 등록번호 46150-2020-00007 · 매수신청대리인 등록 광주지방법원 16-25-6</p>
-  </div>
+  <p>
+    <strong>반가운부동산공인중개사사무소</strong><br />
+    대표: 서정원 | 주소: 순천시 해룡면 매안3길 43, 1층 | 연락처: 010-6482-8545<br />
+    등록번호: 등록번호 입력 필요 | 법원 매수신청대리 관련 등록 정보 입력 필요<br />
+    Copyright © 반가운부동산. All rights reserved.
+  </p>
 </footer>
+
+<nav class="sticky-cta" aria-label="빠른 상담 버튼">
+  <a class="sticky-call" href="tel:010-6482-8545">전화상담</a>
+  <a class="sticky-kakao" href="https://open.kakao.com/me/r_estate119" target="_blank" rel="noopener">카카오</a>
+  <a class="sticky-blog" href="https://blog.naver.com/r-estate119" target="_blank" rel="noopener">블로그</a>
+</nav>
 
 </body>
 </html>
