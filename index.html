@@ -77,7 +77,6 @@ img{display:block;max-width:100%;}
 .topbar{position:sticky;top:0;z-index:50;background:rgba(255,253,248,.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);}
 .topbar-inner{max-width:1080px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;}
 .brand{display:flex;align-items:center;gap:10px;font-weight:900;letter-spacing:-.03em;color:var(--navy);font-size:20px;}
-.phones{margin-top:8px;font-weight:700;color:inherit}.phones a{color:inherit;text-decoration:none;white-space:nowrap}
 .brand-kw{font-style:normal;color:#A3802A;}
 .brand-mark{width:32px;height:32px;border-radius:50%;object-fit:cover;display:block;}
 .top-actions{display:flex;align-items:center;gap:8px;}
@@ -179,6 +178,10 @@ img{display:block;max-width:100%;}
 .location-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:22px;align-items:start;}
 .location-card{background:#fff;border:1px solid var(--line);border-radius:24px;padding:28px;box-shadow:var(--shadow-soft);}
 .addr{font-size:20px;font-weight:900;color:var(--navy);line-height:1.5;margin:12px 0 14px;}
+.contact-rows{list-style:none;margin:0 0 18px;padding:14px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);display:grid;gap:8px;}
+.contact-rows li{display:flex;align-items:center;gap:14px;}
+.contact-rows span{width:48px;font-size:13px;font-weight:800;color:var(--muted);}
+.contact-rows a{font-size:17px;font-weight:800;color:var(--navy);letter-spacing:-.01em;text-decoration:none;}
 .location-card p{color:var(--sub);font-size:16px;line-height:1.75;}
 .map-img{width:100%;border-radius:24px;border:1px solid var(--line);box-shadow:var(--shadow);background:#fff;}
 .map-caption{font-size:13px;color:var(--muted);margin-top:10px;line-height:1.6;}
@@ -356,7 +359,10 @@ img{display:block;max-width:100%;}
         <div class="location-card">
           <div class="label">반가운부동산</div>
           <div class="addr">순천시 해룡면 매안3길 43, 1층</div>
-          <div class="phones">사무실 <a href="tel:061-752-8545">061-752-8545</a> · 휴대폰 <a href="tel:010-6482-8545">010-6482-8545</a></div>
+          <ul class="contact-rows">
+            <li><span>사무실</span><a href="tel:061-752-8545">061-752-8545</a></li>
+            <li><span>휴대폰</span><a href="tel:010-6482-8545">010-6482-8545</a></li>
+          </ul>
           <p>순천법원경매뿐 아니라 여수경매, 광양경매 물건도 함께 상담합니다. 상담 전 전화 또는 카카오 경매상담으로 방문 가능 시간을 먼저 확인해 주세요. 사건번호가 있으면 더 빠르게 검토할 수 있습니다.</p>
           <div style="margin-top:20px;display:flex;gap:10px;flex-wrap:wrap;">
             <a href="tel:010-6482-8545" class="btn btn-call" style="height:52px;font-size:16px;">전화 상담</a>
